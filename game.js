@@ -37,5 +37,20 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+function playGame(rounds) {
+  for (let i = 0; i < rounds; i++) {
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputersChoice();
+    playRound(humanChoice, computerChoice);
+  }
+  if (humanScore > computerScore) {
+    console.log("Hurray!, You Win");
+  } else if (humanScore < computerScore) {
+    console.log("Sorry, you Lose");
+  } else {
+    console.log("It is a Draw");
+  }
+}
+
 let humanScore = 0;
 let computerScore = 0;
