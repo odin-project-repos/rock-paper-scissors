@@ -42,6 +42,8 @@ function playGame(rounds) {
     let humanChoice = getHumanChoice();
     let computerChoice = getComputersChoice();
     playRound(humanChoice, computerChoice);
+    console.log("Your Score: ", humanScore);
+    console.log("Computer Score: ", computerScore);
   }
   if (humanScore > computerScore) {
     console.log("Hurray!, You Win");
