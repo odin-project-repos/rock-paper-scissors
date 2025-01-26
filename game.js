@@ -22,5 +22,20 @@ function getHumanChoice() {
   return choiceNumber;
 }
 
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === 1 && computerChoice === 3) {
+    humanScore += 1;
+  } else if (humanChoice === 2 && computerChoice === 1) {
+    humanScore += 1;
+  } else if (humanChoice === 3 && computerChoice === 2) {
+    humanScore += 1;
+  } else if (humanChoice === computerChoice) {
+    humanScore += 1;
+    computerScore += 1;
+  } else {
+    computerScore += 1;
+  }
+}
+
 let humanScore = 0;
 let computerScore = 0;
