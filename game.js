@@ -57,4 +57,7 @@ function playGame(rounds) {
 let humanScore = 0;
 let computerScore = 0;
 
-playGame(5);
+const selection_list = document.querySelector("ul");
+selection_list.addEventListener("click", (event) => {
+  playGame(event);
+});
