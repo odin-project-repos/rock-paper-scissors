@@ -37,20 +37,24 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame(rounds) {
-  for (let i = 0; i < rounds; i++) {
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputersChoice();
-    playRound(humanChoice, computerChoice);
-    console.log("Your Score: ", humanScore);
-    console.log("Computer Score: ", computerScore);
-  }
-  if (humanScore > computerScore) {
-    console.log("Hurray!, You Win");
-  } else if (humanScore < computerScore) {
-    console.log("Sorry, you Lose");
-  } else {
-    console.log("It is a Draw");
+function playGame(event) {
+  const computerChoice = getComputersChoice();
+  const humanChoice = getHumanChoice(event);
+  playRound(humanChoice, computerChoice);
+  const message = document.querySelector(".result");
+  if (message.textContent !== "") message.textContent = "";
+  changeScore();
+  if (computerScore >= 5 || humanScore >= 5) {
+    if (humanScore > computerScore) {
+      message.textContent = "Hurray!, You Win";
+    } else if (humanScore < computerScore) {
+      message.textContent = "Sorry, you Lose";
+    } else {
+      message.textContent = "It is a Draw";
+    }
+    document.body.appendChild(message);
+    humanScore = 0;
+    computerScore = 0;
   }
 }
 
