@@ -54,6 +54,11 @@ function playGame(rounds) {
   }
 }
 
+function changeScore() {
+  document.querySelector(".human-score").textContent = humanScore;
+  document.querySelector(".computer-score").textContent = computerScore;
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
