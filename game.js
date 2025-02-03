@@ -52,7 +52,6 @@ function playGame(event) {
     } else {
       message.textContent = "It is a Draw";
     }
-    document.body.appendChild(message);
     humanScore = 0;
     computerScore = 0;
   }
