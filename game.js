@@ -2,8 +2,8 @@ function getComputersChoice() {
   return Math.floor(Math.random() * 3) + 1;
 }
 
-function getHumanChoice() {
-  let choice = prompt("Give you choice. Rock, Paper or Scissor?").toLowerCase();
+function getHumanChoice(event) {
+  let choice = event.target.textContent.toLowerCase();
   let choiceNumber = undefined;
   switch (choice) {
     case "rock":
