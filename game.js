@@ -6,6 +6,7 @@ function getComputersChoice() {
 
 function getHumanChoice(event) {
   let choice = event.target.textContent.toLowerCase();
+  let choiceNumber;
   switch (choice) {
     case "rock":
       choiceNumber = 1;
