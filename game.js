@@ -1,10 +1,11 @@
 function getComputersChoice() {
-  return Math.floor(Math.random() * 3) + 1;
+  const array = new Uint32Array(1);
+  window.crypto.getRandomValues(array);
+  return (array[0] % 3) + 1;
 }
 
 function getHumanChoice(event) {
   let choice = event.target.textContent.toLowerCase();
-  let choiceNumber = undefined;
   switch (choice) {
     case "rock":
       choiceNumber = 1;
